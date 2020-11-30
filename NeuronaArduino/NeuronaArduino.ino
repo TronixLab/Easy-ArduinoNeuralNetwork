@@ -35,6 +35,11 @@ MLP mlp(NET_INPUTS, NET_OUTPUTS, layerSizes, MLP::LOGISTIC, initW, true);
   Outputs - the number of network outputs.
   Topology - an array indicating the size of each layer (including outputs), ending with -1.
   ActivFunc - indicates the activation function to be used.
+              Sigmoidal functions:
+                - MLP::LOGISTIC = 0 - Logistic function (from 0 to 1)
+                - MLP::TANH = 1 - Hyperbolic Tangent function (from -1 to 1)
+              Linear function:
+                - MLP::LINEAR = 2 - Linear function 
   Weights - an array with the adjusted weights (obtained in training).
   UsingPGM flags - whether weights are a PROGMEM variable.
 ********************************************************************************************/
